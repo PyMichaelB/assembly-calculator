@@ -31,7 +31,6 @@ _start:
     call printString
     mov rax, 0
     call readInteger64
-halt:
     mov qword [valA], rax
 
     ; fetch number b and store in dword starting at valB
