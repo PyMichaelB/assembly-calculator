@@ -1,5 +1,5 @@
 %include "definitions.inc"
-%include "../print.inc"
+%include "print.inc"
  
 section .bss
     ; space to use when reading in characters from stdin
@@ -26,14 +26,14 @@ _start:
     mov rsi, welcome
     call printString
 
-    ; fetch number a and store in dword starting at valA
+    ; fetch number a and store in qword starting at valA
     mov rsi, enterA
     call printString
     mov rax, 0
     call readInteger64
     mov qword [valA], rax
 
-    ; fetch number b and store in dword starting at valB
+    ; fetch number b and store in qword starting at valB
     mov rsi, enterB
     call printString
     mov rax, 0
